@@ -28,14 +28,14 @@ export const TextButtons = () => {
         },
         {
             name: "strike",
-            isActive: (editor) => editor.isActive("strike"),
-            command: (editor) => editor.chain().focus().toggleStrike().run(),
+            isActive: (editor) => editor?.isActive("strike") ?? false,
+            command: (editor) => editor?.chain().focus().toggleStrike().run(),
             icon: StrikethroughIcon,
         },
         {
             name: "code",
-            isActive: (editor) => editor.isActive("code"),
-            command: (editor) => editor.chain().focus().toggleCode().run(),
+            isActive: (editor) => editor?.isActive("code") ?? false,
+            command: (editor) => editor?.chain().focus().toggleCode().run(),
             icon: CodeIcon,
         },
     ];
